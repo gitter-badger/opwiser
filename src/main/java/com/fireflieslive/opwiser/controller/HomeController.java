@@ -1,4 +1,4 @@
-package com.fireflieslive.onwiser.controller;
+package com.fireflieslive.opwiser.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,8 +9,8 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public String welcome(Model model) {
-		model.addAttribute("greeting", "Welcome to zelbewiser app!");
-		model.addAttribute("tagline", "The one and only amazing webstore");
+		model.addAttribute("greeting", "Opwiser");
+		model.addAttribute("tagline", "live it wise");
 
 		return "welcome";
 	}
