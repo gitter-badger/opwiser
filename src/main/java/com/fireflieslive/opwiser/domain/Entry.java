@@ -1,108 +1,77 @@
 package com.fireflieslive.opwiser.domain;
 
 import java.math.BigDecimal;
+import java.sql.Time;
+import java.time.Duration;
 
-public class Product {
+public class Entry {
 
-	private String productId;
-	private String name;
-	private BigDecimal unitPrice;
-	private String description;
-	private String manufacturer;
+	private String id;
 	private String category;
-	private long unitsInStock;
-	private long unitsInOrder;
-	private boolean discontinued;
-	private String condition;
-
-	public Product() {
+	private String name;
+	private float amount;
+	private double duration;
+	private Time timestamp;
+	
+	public Entry() {
 		super();
 	}
-
-	public Product(String productId, String name, BigDecimal unitPrice) {
-		this.productId = productId;
+	
+	public Entry( String id, String name, float amount, double duration, Time timestamp ) {
+		this.id = id;
 		this.name = name;
-		this.unitPrice = unitPrice;
+		this.amount = amount;
+		this.duration = duration;
+		this.timestamp = timestamp;
 	}
 
-	public String getProductId() {
-		return productId;
+	
+	public String getId() {
+		return id;
 	}
 
-	public void setProductId( String productId ) {
-		this.productId = productId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName( String name ) {
-		this.name = name;
-	}
-
-	public BigDecimal getUnitPrice() {
-		return unitPrice;
-	}
-
-	public void setUnitPrice( BigDecimal unitPrice ) {
-		this.unitPrice = unitPrice;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription( String description ) {
-		this.description = description;
-	}
-
-	public String getManufacturer() {
-		return manufacturer;
-	}
-
-	public void setManufacturer( String manufacturer ) {
-		this.manufacturer = manufacturer;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory( String category ) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 
-	public long getUnitsInStock() {
-		return unitsInStock;
+	public String getName() {
+		return name;
 	}
 
-	public void setUnitsInStock( long unitsInStock ) {
-		this.unitsInStock = unitsInStock;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public long getUnitsInOrder() {
-		return unitsInOrder;
+	public float getAmount() {
+		return amount;
 	}
 
-	public void setUnitsInOrder( long unitsInOrder ) {
-		this.unitsInOrder = unitsInOrder;
+	public void setAmount(float amount) {
+		this.amount = amount;
 	}
 
-	public boolean isDiscontinued() {
-		return discontinued;
+	public double getDuration() {
+		return duration;
 	}
 
-	public void setDiscontinued( boolean discontinued ) {
-		this.discontinued = discontinued;
+	public void setDuration(double duration) {
+		this.duration = duration;
 	}
 
-	public String getCondition() {
-		return condition;
+	public Time getTimestamp() {
+		return timestamp;
 	}
 
-	public void setCondition( String condition ) {
-		this.condition = condition;
+	public void setTimestamp(Time timestamp) {
+		this.timestamp = timestamp;
 	}
 
 	@Override
@@ -116,11 +85,11 @@ public class Product {
 		if ( getClass() != obj.getClass() )
 			return false;
 
-		Product other = ( Product ) obj;
-		if ( productId == null ) {
-			if ( other.productId != null )
+		Entry other = ( Entry ) obj;
+		if ( id == null ) {
+			if ( other.id != null )
 				return false;
-		} else if ( !productId.equals( other.productId ))
+		} else if ( !id.equals( other.id ))
 			return false;
 		return true;
 	}
@@ -129,12 +98,12 @@ public class Product {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + (( productId == null ) ? 0 : productId.hashCode() );
+		result = prime * result + (( id == null ) ? 0 : id.hashCode() );
 		return result;
 	}
 
 	@Override
 	public String toString() {
-		return "Product [productId=" + productId + ", name=" + name + "]";
+		return "Product [entryId=" + id + ", name=" + name + "]";
 	}
 }

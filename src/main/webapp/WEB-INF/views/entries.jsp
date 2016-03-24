@@ -13,8 +13,8 @@
 	<section>
 	<div class="jumbotron">
 		<div class="container">
-			<h1>Products</h1>
-			<p>All the available products in our store</p>
+			<h1>Entries</h1>
+			<p>List of entries</p>
 		</div>
 	</div>
 	</section>
@@ -24,10 +24,10 @@
 		<div class="col-sm-6 col-md-3" style="padding-botomm: 15px">
 			<div class="thumbnail">
 				<div class="caption">
-					<h3>${ product.name }</h3>
-					<p>${ product.description }</p>
-					<p>${ product.unitPrice  }USD</p>
-					<p>Available ${ product.unitsInStock } units in stock</p>
+					<h3>${ entry.name }</h3>
+					<p>${ entry.category }</p>
+					<p>${ entry.amount  }USD</p>
+					<p>This entry will last for ${ entry.duration }</p>
 				</div>
 			</div>
 		</div>
