@@ -1,0 +1,5 @@
+package com.fireflieslive.opwiser.service;
+
+public interface OrderService {
+	void processOrder( String productId, long count );
+}
