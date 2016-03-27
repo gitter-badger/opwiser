@@ -18,5 +18,4 @@ public class ProductServiceImpl implements ProductService{
 	public List<Product> getAllProducts() {
 		return productRepository.getAllProducts();
 	}
-
 }
