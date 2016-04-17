@@ -12,6 +12,6 @@ public class HomeController {
 		model.addAttribute( "greeting", "Opwiser" );
 		model.addAttribute( "tagline", "live wise" );
 
-		return "welcome";
+		return "welcome"; 
 	}
 }
